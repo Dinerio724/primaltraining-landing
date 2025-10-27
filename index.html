@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrimalTraining</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@400;500;600;700;800&family=Geist+Mono&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="container-fluid py-3 bg-light-custom border-bottom border-dark border-1">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <!-- Логотип -->
+      <div class="d-flex align-items-center gap-3">
+        <img src="images/Vector(1).png" alt="PrimalTraining Logo" class="img-fluid" style="height: 32px;">
+        <a class="navbar-brand fw-semibold fs-4 brand-font tracking-tight mb-0" href="#">
+          PrimalTraining
+        </a>
+      </div>
+
+      <!-- Бургер-кнопка для мобильных -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Навигационное меню -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-5">
+          <li class="nav-item">
+            <a class="nav-link nav-link-header fw-medium px-2" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-header fw-medium px-2" href="#">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="btn nav-button-header-reserve fw-medium px-3 py-2 mt-2 mt-lg-0"
+              data-bs-toggle="modal" 
+              data-bs-target="#reserveModal"
+              data-bs-toggle="tooltip" 
+              data-bs-placement="bottom"
+              data-bs-title="Book your first training session">
+              RESERVE YOUR SPOT
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO HEADLINE -->
+<section class="container-fluid py-2">
+  <div class="container" style="max-width: 100%;">
+    <div class="text-center">
+      <h1 class="fs-0 fw-bolder brand-font lh-sm tracking-tight text-black text-start">
+        TRAIN HARD. 
+        <span class="text-primary">LIVE BETTER</span>
+      </h1>
+    </div>
+  </div>
+</section>
+
+<!-- HERO SLIDER SECTION -->
+<section class="container-fluid px-0 border-bottom border-top border-dark border-1">
+  <div class="row g-0">
+    <div class="col-lg-8">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Индикаторы -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <!-- Слайды -->
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img src="images/build.jpg" class="d-block w-100 object-fit-cover min-vh-50" alt="Strength Training">
+            <!-- Текст поверх слайда -->
+            <div class="carousel-caption d-none d-md-block start-0 bottom-0 text-start p-4 w-40">
+              <div class="bg-light-custom p-3 border border-dark border-1">
+                <h5 class="brand-font fw-bold fs-3 text-black">BUILD STRENGTH</h5>
+                <p class="geist-regular mb-0 text-black">Professional equipment for maximum gains</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img src="images/endurance.jpg" class="d-block w-100 object-fit-cover min-vh-50" alt="Cardio Training">
+            <!-- Текст поверх слайда -->
+            <div class="carousel-caption d-none d-md-block start-0 bottom-0 text-start p-4 w-40">
+              <div class="bg-light-custom p-3 border border-dark border-1">
+                <h5 class="brand-font fw-bold fs-3 text-black">BOOST ENDURANCE</h5>
+                <p class="geist-regular mb-0 text-black">Cardio zone with premium equipment</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <img src="images/tribe.png" class="d-block w-100 object-fit-cover min-vh-50" alt="Group Training">
+            <!-- Текст поверх слайда -->
+            <div class="carousel-caption d-none d-md-block start-0 bottom-0 text-start p-4 w-40">
+              <div class="bg-light-custom p-3 border border-dark border-1">
+                <h5 class="brand-font fw-bold fs-3 text-black">JOIN THE TRIBE</h5>
+                <p class="geist-regular mb-0 text-black">Community-driven group sessions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Кнопки навигации -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="col-lg-4 d-flex align-items-center justify-content-between bg-light-custom">
+      <div class="p-5 w-100 d-flex flex-column">
+        <div class="pt-4">
+          <h2 class="fw-bold brand-font display-4 mb-3">FOR THE COMMITTED</h2>
+        </div>
+        <div class="d-flex flex-column justify-content-end">
+          <p class="fs-5 mb-4 geist-regular">Train like an athlete with top-tier equipment and expert programming. Whether you're building muscle or breaking PRs, we help you push past limits.</p>
+          <a href="#" class="btn btn-outline-dark geist-mono-btn text-decoration-none px-4 py-2 align-self-start"
+            data-bs-toggle="tooltip" 
+            data-bs-placement="top"
+            data-bs-title="Learn more about our philosophy">
+            ABOUT US
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDED BY SECTION -->
+<section class="container-fluid px-0">
+  <div class="row g-0">
+    <div class="col-lg-4 p-5 d-flex flex-column justify-content-between bg-light-custom border-bottom border-top border-end border-dark border-1">
+      <h3 class="fw-bold brand-font display-4 mb-4">GUIDED BY EXPERTS</h3>
+      <p class="fs-5 mb-4 geist-regular">We believe in creating a positive environment where you can thrive. We're here to help you achieve your goals and unlock your full potential.</p>
+    </div>
+    <div class="col-lg-4 p-5 d-flex flex-column justify-content-between bg-light-custom border-bottom border-top border-end border-dark border-1">
+      <h3 class="fw-bold brand-font display-4 mb-4">DYNAMIC OPEN GYM</h3>
+      <p class="fs-5 mb-4 geist-regular">Our facility is the optimal environment for strength training and performance, fully equipped with top-of-the-line tools, ample training areas, and a focus on functional movement.</p>
+    </div>
+    <div class="col-lg-4">
+      <img src="images/Image(2).png" alt="Gym Facility" 
+           class="img-fluid w-100 h-100 object-fit-cover min-vh-50">
+    </div>
+  </div>
+</section>
+
+<!-- JOIN THE COMMUNITY -->
+<section class="container-fluid py-2">
+  <div class="container" style="max-width: 100%;">
+    <div class="text-center">
+      <h1 class="fs-0 fw-bolder brand-font lh-sm tracking-tight text-black text-start">
+        JOIN THE
+        <span class="text-primary">COMMUNITY</span>
+      </h1>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOVER POTENTIAL -->
+<section class="container-fluid px-0 border-top border-dark border-1">
+  <div class="row g-0 align-items-stretch">
+    <div class="col-lg-4 bg-light-custom">
+      <div class="h-100 p-5 d-flex flex-column border-end border-dark border-1">
+        
+        <div class="pb-4 mb-4 border-bottom border-dark border-1">
+          <h3 class="fw-bold brand-font display-4">DISCOVER YOUR POTENTIAL</h3>
+        </div>
+
+        <nav>
+          <div class="nav flex-column nav-tabs border-0" id="programTabs" role="tablist">
+            
+            <!-- Tab 1 - Strength -->
+            <button class="nav-link text-start border-0 border-bottom border-dark border-1 rounded-0 py-4 active" 
+                    id="strength-tab" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#strength" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="strength" 
+                    aria-selected="true">
+              <h5 class="fw-bold brand-font fs-2 mb-2">STRENGTH TRAINING</h5>
+              <p class="fs-5 mb-0 geist-regular">Build power and muscle with expert guidance</p>
+            </button>
+
+            <!-- Tab 2 - Cardio -->
+            <button class="nav-link text-start border-0 border-bottom border-dark border-1 rounded-0 py-4" 
+                    id="cardio-tab" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#cardio" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="cardio" 
+                    aria-selected="false">
+              <h5 class="fw-bold brand-font fs-2 mb-2">CARDIO ZONE</h5>
+              <p class="fs-5 mb-0 geist-regular">Boost endurance and burn calories effectively</p>
+            </button>
+
+            <!-- Tab 3 - Group -->
+            <button class="nav-link text-start border-0 border-bottom border-dark border-1 rounded-0 py-4" 
+                    id="group-tab" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#group" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="group" 
+                    aria-selected="false">
+              <h5 class="fw-bold brand-font fs-2 mb-2">GROUP CLASSES</h5>
+              <p class="fs-5 mb-0 geist-regular">Train together, achieve more as a community</p>
+            </button>
+
+            <!-- Tab 4 - Personal -->
+            <button class="nav-link text-start border-0 border-bottom border-dark border-1 rounded-0 py-4" 
+                    id="personal-tab" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#personal" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="personal" 
+                    aria-selected="false">
+              <h5 class="fw-bold brand-font fs-2 mb-2">PERSONAL TRAINING</h5>
+              <p class="fs-5 mb-0 geist-regular">One-on-one coaching for your specific goals</p>
+            </button>
+
+          </div>
+        </nav>
+
+        <div class="pt-4 mt-auto">
+          <a href="#" class="btn btn-outline-dark geist-mono-btn text-decoration-none px-4 py-2"
+            data-bs-toggle="tooltip" 
+            data-bs-placement="top"
+            data-bs-title="See our complete schedule and classes">
+            VIEW ALL PROGRAMS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-8">
+      <div class="tab-content h-100" id="programTabsContent">
+        
+        <!-- Strength Tab -->
+        <div class="tab-pane fade show active h-100" id="strength" role="tabpanel" aria-labelledby="strength-tab">
+          <div class="position-relative h-100">
+            <img src="images/Strength.jpg" alt="Strength Training" 
+                 class="img-fluid w-100 h-100 object-fit-cover">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-5">
+              <div class="bg-light-custom p-4 border border-dark border-1">
+                <h4 class="brand-font fw-bold fs-1">BUILD REAL POWER</h4>
+                <p class="geist-regular fs-5 mb-0">Professional equipment and techniques to maximize your strength gains. Perfect for athletes and beginners alike.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cardio Tab -->
+        <div class="tab-pane fade h-100" id="cardio" role="tabpanel" aria-labelledby="cardio-tab">
+          <div class="position-relative h-100">
+            <img src="images/Cardio.jpg" alt="Cardio Zone" 
+                 class="img-fluid w-100 h-100 object-fit-cover">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-5">
+              <div class="bg-light-custom p-4 border border-dark border-1">
+                <h4 class="brand-font fw-bold fs-1">ELEVATE YOUR ENDURANCE</h4>
+                <p class="geist-regular fs-5 mb-0">State-of-the-art cardio equipment with personalized programs to boost your cardiovascular health.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group Tab -->
+        <div class="tab-pane fade h-100" id="group" role="tabpanel" aria-labelledby="group-tab">
+          <div class="position-relative h-100">
+            <img src="images/Group.jpg" alt="Group Classes" 
+                 class="img-fluid w-100 h-100 object-fit-cover">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-5">
+              <div class="bg-light-custom p-4 border border-dark border-1">
+                <h4 class="brand-font fw-bold fs-1">TRAIN TOGETHER, ACHIEVE MORE</h4>
+                <p class="geist-regular fs-5 mb-0">From HIIT to yoga, our group classes offer motivation and community spirit to push your limits.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Tab -->
+        <div class="tab-pane fade h-100" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+          <div class="position-relative h-100">
+            <img src="images/Personal.jpg" alt="Personal Training" 
+                 class="img-fluid w-100 h-100 object-fit-cover">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-5">
+              <div class="bg-light-custom p-4 border border-dark border-1">
+                <h4 class="brand-font fw-bold fs-1">YOUR JOURNEY, YOUR PLAN</h4>
+                <p class="geist-regular fs-5 mb-0">Customized training programs with dedicated coaches to help you reach your specific fitness goals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="container-fluid bg-light-custom border-bottom border-dark border-1">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5">
+          <h2 class="brand-font fw-bold display-4 mb-3">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="geist-mono text-secondary fs-5">Everything you need to know about getting started</p>
+        </div>
+
+        <div class="accordion border-0" id="faqAccordion">
+          
+          <!-- Item 1 -->
+          <div class="accordion-item border border-dark border-1 border-bottom-0 rounded-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed bg-light-custom geist-mono fw-medium fs-5 py-4" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#faqOne" 
+                      aria-expanded="false" 
+                      aria-controls="faqOne">
+                WHAT'S INCLUDED IN THE MEMBERSHIP?
+              </button>
+            </h3>
+            <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-white geist-regular fs-6">
+                Full access to all equipment, group classes, locker rooms, and amenities. Plus personalized onboarding session with our trainers.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item border border-dark border-1 border-bottom-0 rounded-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed bg-light-custom geist-mono fw-medium fs-5 py-4" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#faqTwo" 
+                      aria-expanded="false" 
+                      aria-controls="faqTwo">
+                DO I NEED PREVIOUS TRAINING EXPERIENCE?
+              </button>
+            </h3>
+            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-white geist-regular fs-6">
+                Not at all! We welcome all fitness levels. Our trainers will help you start at the right pace and build from there.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item border border-dark border-1 border-bottom-0 rounded-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed bg-light-custom geist-mono fw-medium fs-5 py-4" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#faqThree" 
+                      aria-expanded="false" 
+                      aria-controls="faqThree">
+                WHAT ARE YOUR OPENING HOURS?
+              </button>
+            </h3>
+            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-white geist-regular fs-6">
+                We're open 5:00-23:00 on weekdays, 8:00-16:00 on Saturdays, and 8:00-13:00 on Sundays. Holiday hours may vary.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="accordion-item border border-dark border-1 border-bottom-0 rounded-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed bg-light-custom geist-mono fw-medium fs-5 py-4" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#faqFour" 
+                      aria-expanded="false" 
+                      aria-controls="faqFour">
+                CAN I FREEZE MY MEMBERSHIP?
+              </button>
+            </h3>
+            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-white geist-regular fs-6">
+                Yes, you can freeze your membership for up to 3 months per year for medical or travel reasons.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="accordion-item border border-dark border-1 rounded-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed bg-light-custom geist-mono fw-medium fs-5 py-4" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#faqFive" 
+                      aria-expanded="false" 
+                      aria-controls="faqFive">
+                DO YOU OFFER PERSONAL TRAINING?
+              </button>
+            </h3>
+            <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-white geist-regular fs-6">
+                Absolutely! We have certified personal trainers available for one-on-one sessions. Ask at the front desk for packages.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="container-fluid px-0 min-vh-50 d-flex align-items-center justify-content-center bg-primary border-bottom border-dark border-1">
+  <div class="text-center">
+    <h6 class="text-uppercase text-black fw-medium mb-3 geist-mono">WHAT WE BELIEVE IN</h6>
+    <h2 class="fw-bold brand-font display-4 mb-4 text-black">JOIN THE PRIMAL TRIBE TODAY!</h2>
+    <a href="#" class="btn bg-light-custom bg-light-custom-hover text-black px-4 py-2 geist-mono fw-normal"
+      data-bs-toggle="modal" 
+      data-bs-target="#reserveModal"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top"
+      data-bs-title="Start your fitness journey today">
+      RESERVE YOUR SPOT
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="container-fluid px-0 py-5">
+  <div class="container" style="max-width: 100%;">
+    <div class="row mb-5 pb-5 border-bottom">
+      <div class="col-md-6">
+        <img src="images/Vector.png" alt="PrimalTraining Logo">
+      </div>
+      <div class="col-md-6 text-md-end">
+        <h5 class="fw-bold brand-font fs-3 mb-0">PrimalTraining</h5>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="fw-semibold mb-3">Contact</h6>
+        <p class="text-secondary mb-0">Email: hello@figma.com<br>Phone: (203) 555-5555</p>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="fw-semibold mb-3">Opening Hours</h6>
+        <p class="text-secondary mb-0">
+          Mon-Fri 5:00-23:00<br>
+          Saturdays 8:00-16:00<br>
+          Sundays 8:00-13:00<br>
+          Holidays 8:00-16:00
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-semibold mb-3">Social</h6>
+        <div class="d-flex flex-column">
+          <a href="#" class="text-secondary text-decoration-none mb-1">Instagram</a>
+          <a href="#" class="text-secondary text-decoration-none mb-1">X</a>
+          <a href="#" class="text-secondary text-decoration-none mb-1">LinkedIn</a>
+          <a href="#" class="text-secondary text-decoration-none">Spotify</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="reserveModal" tabindex="-1" aria-labelledby="reserveModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border border-dark border-2 rounded-0">
+      
+      <!-- Modal Header -->
+      <div class="modal-header border-bottom border-dark border-2 px-4 py-3">
+        <h2 class="modal-title brand-font fw-bold fs-3" id="reserveModalLabel">RESERVE YOUR SPOT</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <!-- Modal Body -->
+      <div class="modal-body px-4 py-3">
+        <p class="geist-mono text-secondary mb-4">Fill out the form below to book your first training session.</p>
+        
+        <!-- Форма -->
+        <form id="reserveForm" class="needs-validation" novalidate>
+          <div class="row g-3">
+            <!-- Имя -->
+            <div class="col-md-6">
+              <label for="firstName" class="form-label geist-mono fw-medium">FIRST NAME *</label>
+              <input type="text" class="form-control border border-dark border-1 rounded-0 geist-mono" id="firstName" required>
+              <div class="invalid-feedback geist-mono">
+                Please provide your first name.
+              </div>
+            </div>
+            
+            <!-- Фамилия -->
+            <div class="col-md-6">
+              <label for="lastName" class="form-label geist-mono fw-medium">LAST NAME *</label>
+              <input type="text" class="form-control border border-dark border-1 rounded-0 geist-mono" id="lastName" required>
+              <div class="invalid-feedback geist-mono">
+                Please provide your last name.
+              </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="col-12">
+              <label for="email" class="form-label geist-mono fw-medium">EMAIL *</label>
+              <input type="email" class="form-control border border-dark border-1 rounded-0 geist-mono" id="email" required>
+              <div class="invalid-feedback geist-mono">
+                Please provide a valid email.
+              </div>
+            </div>
+            
+            <!-- Телефон -->
+            <div class="col-12">
+              <label for="phone" class="form-label geist-mono fw-medium">PHONE</label>
+              <input type="tel" class="form-control border border-dark border-1 rounded-0 geist-mono" id="phone">
+            </div>
+            
+            <!-- Тип тренировки -->
+            <div class="col-12">
+              <label for="trainingType" class="form-label geist-mono fw-medium">PREFERRED TRAINING</label>
+              <select class="form-select border border-dark border-1 rounded-0 geist-mono" id="trainingType">
+                <option selected>Select training type...</option>
+                <option value="strength">Strength Training</option>
+                <option value="cardio">Cardio</option>
+                <option value="group">Group Classes</option>
+                <option value="personal">Personal Training</option>
+              </select>
+            </div>
+            
+            <!-- Дата -->
+            <div class="col-12">
+              <label for="date" class="form-label geist-mono fw-medium">PREFERRED DATE</label>
+              <input type="date" class="form-control border border-dark border-1 rounded-0 geist-mono" id="date">
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Modal Footer -->
+      <div class="modal-footer border-top border-dark border-2 px-4 py-3">
+        <button type="button" class="btn btn-outline-dark border-2 geist-mono fw-medium px-4" data-bs-dismiss="modal">CLOSE</button>
+        <button type="submit" form="reserveForm" class="btn nav-button-header-reserve geist-mono fw-medium px-4">
+          RESERVE NOW
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+
+  <!-- Success Toast -->
+  <div id="successToast" class="toast border border-dark border-2 rounded-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header bg-light-custom border-bottom border-dark border-2">
+      <img src="images/Vector(1).png" class="rounded-0 me-2" alt="Logo" style="height: 20px;">
+      <strong class="me-auto brand-font">PrimalTraining</strong>
+      <small class="geist-mono">just now</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body bg-white">
+      <div class="d-flex align-items-center">
+        <div class="flex-grow-1">
+          <h6 class="brand-font fw-bold mb-1">SUCCESSFULLY BOOKED!</h6>
+          <p class="geist-regular mb-0">Your training session has been reserved. We'll contact you shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Welcome Toast -->
+  <div id="welcomeToast" class="toast border border-dark border-2 rounded-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header bg-primary border-bottom border-dark border-2">
+      <img src="images/Vector(1).png" class="rounded-0 me-2" alt="Logo" style="height: 20px;">
+      <strong class="me-auto brand-font text-black">Welcome to PrimalTraining</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body bg-white">
+      <p class="geist-regular mb-0">Ready to transform your body? Start with a free trial session.</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scrypt.js"></script>
+</body>
+</html>
